@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  /* Core palette — "signal" direction: real-time systems, connection, latency */
+  --ink: #0a0e14;            /* near-black background */
+  --ink-raised: #11151d;     /* slightly raised panels */
+  --surface: #1a1f2b;        /* card surface */
+  --surface-border: #262c3a; /* hairline borders on surfaces */
+  --paper: #e8e6e1;          /* warm off-white text */
+  --paper-dim: #9aa0ab;      /* secondary text */
+  --signal-orange: #ff6b4a;  /* primary accent — "connection established" */
+  --signal-blue: #4a9eff;    /* secondary accent — data / network */
+  --signal-green: #4ade80;   /* status: online / success, used sparingly */
+
+  --background: var(--ink);
+  --foreground: var(--paper);
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-signal-orange: var(--signal-orange);
+  --color-signal-blue: var(--signal-blue);
+  --color-signal-green: var(--signal-green);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono-stack: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Native cursor stays visible — only a decorative trailing ring is added,
+   so no cursor-hiding rule is needed here. */
+
+::selection {
+  background: var(--signal-orange);
+  color: var(--ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--signal-orange);
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal-orange);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+.font-mono-stack {
+  font-family: var(--font-mono), monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes signal-travel {
+  0% { stroke-dashoffset: 24; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.bg-grain {
+  background-image: radial-gradient(circle at 1px 1px, rgba(232, 230, 225, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
