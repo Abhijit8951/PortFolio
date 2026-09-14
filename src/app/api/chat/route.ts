@@ -39,7 +39,8 @@ TECHNICAL SKILLS:
 - Databases: MongoDB
 - Real-Time: WebRTC (P2P & SFU architectures), Socket.IO, WebSockets
 - DevOps/Tools: Docker, GitHub Actions, Git, JWT Authentication
-- Currently learning: Kubernetes, Go, LLM/AI APIs, DevSecOps (OWASP, Snyk, AWS Security)
+- Currently learning: Kubernetes, Go, DevSecOps (OWASP, Snyk, AWS Security)
+- AI & Generative: Python, Generative AI, Agentic AI, LLM APIs, RAG (Retrieval-Augmented Generation), MCP (Model Context Protocol)
 - Data Visualization: Chart.js, D3.js
 
 PROJECTS:
