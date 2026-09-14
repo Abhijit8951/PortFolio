@@ -99,6 +99,7 @@ export const profile = {
         { name: "Node.js / Express", level: 88 },
         { name: "MongoDB", level: 82 },
         { name: "RESTful APIs", level: 85 },
+        { name: "Python", level: 70 },
       ],
     },
     {
@@ -115,6 +116,16 @@ export const profile = {
         { name: "Kubernetes", level: 55 },
         { name: "OWASP / Snyk / SonarQube", level: 60 },
         { name: "AWS", level: 60 },
+      ],
+    },
+    {
+      category: "AI & Generative",
+      items: [
+        { name: "Generative AI", level: 72 },
+        { name: "Agentic AI", level: 65 },
+        { name: "LLM APIs", level: 70 },
+        { name: "RAG", level: 60 },
+        { name: "MCP (Model Context Protocol)", level: 60 },
       ],
     },
   ] satisfies SkillCategory[],
